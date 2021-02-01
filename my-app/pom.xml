@@ -22,11 +22,13 @@
         <version>3.8.1</version>
       </plugin>
       <plugin>
+        <!-- mvn exec:java -Dexec.mainClass=com.example.Example -Dexec.args='a b c' -->
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
         <version>3.0.0</version>
         <configuration>
-          <mainClass>${myApp.mainClass}</mainClass>
+          <!-- <mainClass>${myApp.mainClass}</mainClass> -->
+          <cleanupDaemonThreads>false</cleanupDaemonThreads>
         </configuration>
       </plugin>
       <plugin>
